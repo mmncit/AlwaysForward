@@ -1,49 +1,62 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Employer:</strong>
-  <%= @insurance_coverage.employer %>
-</p>
+<h2 class="ui center aligned icon header">
+  <i class="info circle icon"></i>
+  Insurance Coverage Information
+</h2>
 
-<p>
-  <strong>Insurance company:</strong>
-  <%= @insurance_coverage.insurance_company %>
-</p>
+<div class="ui grid">
+  <div class="four wide column"></div>
+    <div class="eight wide column">
+      <p>
+        <strong>Employer:</strong>
+        <%= @insurance_coverage.employer %>
+      </p>
 
-<p>
-  <strong>Policy number:</strong>
-  <%= @insurance_coverage.policy_number %>
-</p>
+      <p>
+        <strong>Insurance company:</strong>
+        <%= @insurance_coverage.insurance_company %>
+      </p>
 
-<p>
-  <strong>Coverage percentage:</strong>
-  <%= @insurance_coverage.coverage_percentage %>
-</p>
+      <p>
+        <strong>Policy number:</strong>
+        <%= @insurance_coverage.policy_number %>
+      </p>
 
-<p>
-  <strong>Coverage type:</strong>
-  <%= @insurance_coverage.coverage_type %>
-</p>
+      <p>
+        <strong>Coverage percentage:</strong>
+        <%= @insurance_coverage.coverage_percentage %>
+      </p>
 
-<p>
-  <strong>Product quantity:</strong>
-  <%= @insurance_coverage.product_quantity %>
-</p>
+      <p>
+        <strong>Coverage type:</strong>
+        <%= @insurance_coverage.coverage_type %>
+      </p>
 
-<p>
-  <strong>Maximum amount:</strong>
-  <%= @insurance_coverage.maximum_amount %>
-</p>
+      <p>
+        <strong>Product quantity:</strong>
+        <%= @insurance_coverage.product_quantity %>
+      </p>
 
-<p>
-  <strong>Coverage frequency:</strong>
-  <%= @insurance_coverage.coverage_frequency %>
-</p>
+      <p>
+        <strong>Maximum amount:</strong>
+        <%= @insurance_coverage.maximum_amount %>
+      </p>
 
-<p>
-  <strong>Coverage period:</strong>
-  <%= @insurance_coverage.coverage_period %>
-</p>
+      <p>
+        <strong>Coverage frequency:</strong>
+        <%= @insurance_coverage.coverage_frequency %>
+      </p>
 
-<%= link_to 'Edit', edit_insurance_coverage_path(@insurance_coverage) %> |
-<%= link_to 'Back', insurance_coverages_path %>
+      <p>
+        <strong>Coverage period:</strong>
+        <%= @insurance_coverage.coverage_period %>
+      </p>
+  </div>
+</div>
+<div align="center">
+   <%= link_to 'Edit', edit_insurance_coverage_path(@insurance_coverage) %> |
+   <%= link_to 'Back', insurance_coverages_path %>
+</div>
+     
+    

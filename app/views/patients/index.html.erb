@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Patients</h1>
-
+<h2 class="ui center aligned icon header">
+  <i class="address card icon"></i>
+  Patients
+</h2>
+<%= link_to 'New Patient', new_patient_path %>
 <table class="ui sortable celled table">
   <thead>
     <tr>
@@ -30,7 +33,7 @@
         <td><%= patient.province %></td>
         <td><%= patient.postal_code %></td>
         <td><%= patient.employer %></td>
-        <td class="positive"><%= link_to semantic_icon('file') + 'Show', patient %></td>
+        <td class="positive"><%= link_to semantic_icon('file') + 'Summary', patient %></td>
         <td class="warning"><%= link_to semantic_icon('edit') + 'Edit', edit_patient_path(patient) %></td>
         <td class="negative"><%= link_to semantic_icon('trash') + 'Delete', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -40,4 +43,4 @@
 
 <br>
 
-<%= link_to 'New Patient', new_patient_path %>
+

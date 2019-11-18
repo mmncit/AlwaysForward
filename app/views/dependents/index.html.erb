@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Dependents</h1>
-
-<table>
+<h2 class="ui center aligned icon header">
+  <i class="users icon"></i>
+  Dependents
+</h2>
+<%= link_to 'New Dependent', new_dependent_path %>
+<table class="ui sortable celled table">
   <thead>
     <tr>
       <th>Name</th>
@@ -18,9 +21,9 @@
         <td><%= dependent.name %></td>
         <td><%= dependent.cell_phone %></td>
         <td><%= dependent.employer %></td>
-        <td><%= link_to 'Show', dependent %></td>
-        <td><%= link_to 'Edit', edit_dependent_path(dependent) %></td>
-        <td><%= link_to 'Destroy', dependent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="positive"><%= link_to semantic_icon('file') + 'Summary', dependent %></td>
+        <td class="warning"><%= link_to semantic_icon('edit') + 'Edit', edit_dependent_path(dependent) %></td>
+        <td class="negative"><%= link_to semantic_icon('trash') + 'Delete', dependent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Dependent', new_dependent_path %>
+

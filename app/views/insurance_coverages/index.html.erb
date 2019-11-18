@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Insurance Coverages</h1>
-
-<table>
+<h2 class="ui center aligned icon header">
+  <i class="file alternate icon"></i>
+  Insurance Converages
+</h2>
+<%= link_to 'New Insurance Coverage', new_insurance_coverage_path %>
+<table class="ui sortable celled table">
   <thead>
     <tr>
       <th>Employer</th>
@@ -30,9 +33,9 @@
         <td><%= insurance_coverage.maximum_amount %></td>
         <td><%= insurance_coverage.coverage_frequency %></td>
         <td><%= insurance_coverage.coverage_period %></td>
-        <td><%= link_to 'Show', insurance_coverage %></td>
-        <td><%= link_to 'Edit', edit_insurance_coverage_path(insurance_coverage) %></td>
-        <td><%= link_to 'Destroy', insurance_coverage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="positive"><%= link_to semantic_icon('file') + 'Summary', insurance_coverage %></td>
+        <td class="warning"><%= link_to semantic_icon('edit') + 'Edit', edit_insurance_coverage_path(insurance_coverage) %></td>
+        <td class="negative"><%= link_to semantic_icon('trash') + 'Delete', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -40,4 +43,4 @@
 
 <br>
 
-<%= link_to 'New Insurance Coverage', new_insurance_coverage_path %>
+
