@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@dependent) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.association :patient %>
+    <%= f.input :dependency_type, collection: [ "Spouse", "Child"] %>
+    <%= f.input :name %>
+    <%= f.input :cell_phone %>
+    <%= f.input :employer %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+class InsuranceCoverage < ApplicationRecord
+end

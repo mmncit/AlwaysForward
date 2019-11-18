@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dependent.name %>
+</p>
+
+<p>
+  <strong>Primary:</strong>
+  <%= @dependent.patient.name %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @dependent.dependency_type %>
+</p>
+
+<p>
+  <strong>Cell phone:</strong>
+  <%= @dependent.cell_phone %>
+</p>
+
+<p>
+  <strong>Employer:</strong>
+  <%= @dependent.employer %>
+</p>
+
+<%= link_to 'Edit', edit_dependent_path(@dependent) %> |
+<%= link_to 'Back', dependents_path %>

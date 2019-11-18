@@ -1,0 +1,19 @@
+<div class="ui inverted menu">
+  <div class="active item">
+
+    
+        <%= link_to "Home", root_path, :class => "item" %>
+        <%= link_to "Patients", patients_path, :class => "item" %>
+        <%= link_to "Dependents", dependents_path, :class => "item" %>
+        <%= link_to "Insurance Coverages", insurance_coverages_path, :class => "item" %>
+        
+       
+        
+    </div>
+
+    <div class="right menu">
+        <button class="ui button">
+            <%= link_to semantic_icon('sign-out') + 'Logout' %>
+        </button>
+    </div>
+</div>

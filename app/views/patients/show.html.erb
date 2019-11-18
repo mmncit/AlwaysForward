@@ -1,0 +1,77 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Clinic:</strong>
+  <%= @patient.clinic %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @patient.name %>
+</p>
+
+<p>
+  <strong>Home phone:</strong>
+  <%= @patient.home_phone %>
+</p>
+
+<p>
+  <strong>Cell phone:</strong>
+  <%= @patient.cell_phone %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @patient.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @patient.city %>
+</p>
+
+<p>
+  <strong>Province:</strong>
+  <%= @patient.province %>
+</p>
+
+<p>
+  <strong>Postal code:</strong>
+  <%= @patient.postal_code %>
+</p>
+
+<p>
+  <strong>Employer:</strong>
+  <%= @patient.employer %>
+</p>
+
+<div class="ui segment">
+  <% @patient.dependents.each do |dependent| %>
+    <h2 class="ui left floated header"><%= dependent.name %></h2>
+    <div class="ui clearing divider"></div>
+    
+    <p>
+      <strong>Name:</strong>
+      <%= dependent.name %>
+    </p>
+
+    <p>
+      <strong>Type:</strong>
+      <%= dependent.dependency_type %>
+    </p>
+
+    <p>
+      <strong>Cell phone:</strong>
+      <%= dependent.cell_phone %>
+    </p>
+
+    <p>
+      <strong>Employer:</strong>
+      <%= dependent.employer %>
+    </p>
+
+  <% end %>
+</div>
+
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>

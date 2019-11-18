@@ -1,0 +1,21 @@
+
+<%= simple_form_for(@insurance_coverage) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :employer %>
+    <%= f.input :insurance_company %>
+    <%= f.input :policy_number %>
+    <%= f.input :coverage_percentage %>
+    <%= f.input :coverage_type %>
+    <%= f.input :product_quantity %>
+    <%= f.input :maximum_amount %>
+    <%= f.input :coverage_frequency %>
+    <%= f.input :coverage_period %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
