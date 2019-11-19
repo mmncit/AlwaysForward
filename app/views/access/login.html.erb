@@ -1,0 +1,30 @@
+<% @page_title = "Admin Login" %>
+
+<h2 class="ui center aligned icon header">
+  <i class="shopping cart icon"></i>
+  Always Forward : Sales Inventory Management System 
+</h2>
+
+<div class="ui grid">
+  <div class="six wide column"></div>
+    <div class="eight wide column">
+        <div class="login">
+        <%= form_tag(access_attempt_login_path, :method => :post) do %>
+        <table>
+            <tr>
+            <td><%= label_tag(:username) %></td>
+            <td><%= text_field_tag(:username, params[:username]) %></td>
+            </tr>
+            <tr>
+            <td><%= label_tag(:password) %></td>
+            <td><%= password_field_tag(:password) %></td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td><%= submit_tag("Log In") %></td>
+            </tr>
+        </table>
+        <% end %>
+        </div>
+    </div>
+</div>

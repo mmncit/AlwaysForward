@@ -1,4 +1,6 @@
 class InsuranceCoveragesController < ApplicationController
+
+  before_action :confirm_logged_in?
   before_action :set_insurance_coverage, only: [:show, :edit, :update, :destroy]
 
   # GET /insurance_coverages

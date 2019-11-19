@@ -2,7 +2,7 @@
   <div class="active item">
 
     
-        <%= link_to "Home", root_path, :class => "item" %>
+        <!--<%= link_to "Home", root_path, :class => "item" %> -->
         <%= link_to "Patients", patients_path, :class => "item" %>
         <%= link_to "Dependents", dependents_path, :class => "item" %>
         <%= link_to "Insurance Coverages", insurance_coverages_path, :class => "item" %>
@@ -13,7 +13,7 @@
 
     <div class="right menu">
         <button class="ui button">
-            <%= link_to semantic_icon('sign-out') + 'Logout' %>
+            <%= link_to semantic_icon('sign-out') + 'Logout', access_logout_path %>
         </button>
     </div>
 </div>

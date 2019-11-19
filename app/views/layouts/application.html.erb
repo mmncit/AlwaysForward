@@ -10,8 +10,10 @@
   </head>
 
   <body>
-    <%= render 'layouts/navigation' %>
-    <%= semantic_flash %>
+    <% if session[:user_id] %>
+      <%= render 'layouts/navigation' %>
+    <% end %>
+    <!--<%= semantic_flash %>-->
     <div class="ui form">
       <%= yield %>
     </div>

@@ -1,5 +1,6 @@
 class DependentsController < ApplicationController
-
+  
+  before_action :confirm_logged_in?
   before_action :set_dependent, only: [:show, :edit, :update, :destroy]
 
   # GET /dependents

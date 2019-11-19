@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Faker::Config.locale = 'en-CA'
 # generate patient data
-20.times do
+0.times do
     Patient.create({
         clinic: [
             "Brentwood Family Medical Centre", 
@@ -31,7 +31,14 @@ Faker::Config.locale = 'en-CA'
 10.times do
     InsuranceCoverage.create({
       employer: Faker::Company.name,
-      insurance_company: Faker::Company.name, 
+      insurance_company: [
+        "Intact", 
+        "Aviva", 
+        "Empire Life",
+        "Desjardins Group", 
+        "SSQ Financial Group",
+        "Sun Life Financial",
+        "TD Insurance"].sample, 
       policy_number: Faker::Number.number(digits: 10),
       coverage_percentage: Faker::Number.decimal(l_digits: 2),  
       coverage_type: ["Orthotics", "Compression Stockings", "Braces"].sample, 
