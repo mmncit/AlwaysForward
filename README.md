@@ -1,24 +1,33 @@
-# README
+# AlwaysForward
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sales management system for a local health and wellness company *AlwaysForward*
 
-Things you may want to cover:
+### Live APP LINK : [https://alwaysforwardadmin.herokuapp.com](https://alwaysforwardadmin.herokuapp.com)
 
-* Ruby version
+* Implemented an authentication process for the admin user
+* Followed Kanban in software development
 
-* System dependencies
 
-* Configuration
+## Build instruction:
 
-* Database creation
+```bash
+bundle install 
+rails server
+```
 
-* Database initialization
 
-* How to run the test suite
+## Technologies:
 
-* Services (job queues, cache servers, search engines, etc.)
+* Database: PostgreSQL
 
-* Deployment instructions
+* No test cases are written yet!
 
-* ...
+* Gems:
+  * figaro (heroku-friendly rails app configuration)
+  * semantic-ui-sass (Semantic UI for Sass)
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
